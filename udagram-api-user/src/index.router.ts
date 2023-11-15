@@ -1,5 +1,5 @@
 import {Router, Request, Response} from 'express';
-import {UserRouter} from '../udagram-api-user/src/routes/user.router';
+import {UserRouter} from './routes/user.router';
 
 const router: Router = Router();
 

@@ -2,8 +2,8 @@ import {Router, Request, Response} from 'express';
 import {FeedItem} from '../models/FeedItem';
 import {NextFunction} from 'connect';
 import * as jwt from 'jsonwebtoken';
-import * as AWS from '../../../udagram-api/src/aws';
-import * as c from '../../../udagram-api/src/config/config';
+import * as AWS from '../aws';
+import * as c from '../config/config';
 
 const router: Router = Router();
 
