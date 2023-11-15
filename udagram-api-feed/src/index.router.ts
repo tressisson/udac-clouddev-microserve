@@ -1,6 +1,6 @@
 import {Router, Request, Response} from 'express';
-import {FeedRouter} from './src/routes/feed.router';
-
+import {FeedRouter} from './routes/feed.router';
+../../udagram-api-user/src/routes/user.router
 const router: Router = Router();
 
 router.use('/feed', FeedRouter);
