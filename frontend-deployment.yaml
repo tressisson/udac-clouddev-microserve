@@ -15,7 +15,7 @@ spec:
         app: frontend
     spec:
       containers:
-      - image: tressisson/udagram-frontend:latest
+      - image: tressisson/udagram-frontend:v2
         name: frontend
         imagePullPolicy: Always  
         resources:
