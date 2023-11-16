@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: frontend
+  name: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - image: tressisson/udagram-frontend:latest
+        name: frontend
+        imagePullPolicy: Always  
+        resources:
+          requests:
+            memory: "4092Mi"
+            cpu: "500m"
+          limits:
+            memory: "4092Mi"
+            cpu: "500m"                        
+        volumeMounts:
+        - name: aws-secret
+          mountPath: "/root/.aws/"
+          readOnly: true        
+      restartPolicy: Always
+      volumes:
+      - name: aws-secret
+        secret:
+          secretName: aws-secret
